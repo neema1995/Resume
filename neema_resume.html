@@ -3,380 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neema Sunder AV – Software Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <title>Neema Sunder AV - Resume</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    @page { size: A4; margin: 0; }
 
-    :root {
-      --green:   #2e7d5e;
-      --green-light: #e8f5f0;
-      --ink:     #1a1a2e;
-      --muted:   #5a5a72;
-      --border:  #d4dde8;
-      --bg:      #f7f9fc;
-      --white:   #ffffff;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { background: #ffffff; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      font-size: 14px;
-      line-height: 1.6;
-      padding: 40px 20px;
-    }
-
-    .page {
-      max-width: 860px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      line-height: 1.3;
+      color: #222222;
+      background: #ffffff;
+      max-width: 210mm;
       margin: 0 auto;
-      background: var(--white);
-      border-radius: 12px;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.08);
-      overflow: hidden;
+      padding: 10mm 15mm;
     }
 
-    /* ── HEADER ── */
-    .header {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
-      align-items: start;
-      padding: 44px 48px 36px;
-      border-bottom: 2px solid var(--green-light);
+    a { color: #222222; text-decoration: none; }
+
+    strong { color: #000000; }
+
+    /* Header */
+    h1 {
+      font-size: 20pt;
+      font-weight: bold;
+      color: #1f3a5f;
+      line-height: 1.15;
     }
 
-    .header-left h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      font-weight: 600;
-      color: var(--ink);
-      letter-spacing: -0.5px;
-      line-height: 1.1;
+    .headline {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #444444;
+      margin-top: 2pt;
     }
 
-    .header-left .role {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 2px;
+    .contact {
+      font-size: 9pt;
+      color: #333333;
+      margin-top: 3pt;
+    }
+    .contact span { white-space: nowrap; }
+
+    /* Sections */
+    h2 {
+      font-size: 11pt;
+      font-weight: bold;
       text-transform: uppercase;
-      color: var(--green);
+      letter-spacing: 0;
+      color: #1f3a5f;
+      border-bottom: 1.5px solid #1f3a5f;
+      padding-bottom: 2pt;
+      margin-top: 9pt;
+      margin-bottom: 4pt;
     }
 
-    .header-left .linkedin {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 14px;
-      font-size: 0.82rem;
-      color: var(--green);
-      text-decoration: none;
-      border: 1px solid var(--green);
-      padding: 4px 12px;
-      border-radius: 20px;
-      transition: background 0.2s;
-    }
-    .header-left .linkedin:hover { background: var(--green-light); }
-
-    .header-right {
-      text-align: right;
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.9;
-    }
-    .header-right strong { color: var(--ink); font-weight: 500; }
-    .header-right a { color: var(--green); text-decoration: none; }
-    .header-right .phone { font-weight: 700; color: var(--ink); font-size: 0.9rem; }
-
-    /* ── BODY ── */
-    .body { padding: 40px 48px; display: flex; flex-direction: column; gap: 36px; }
-
-    /* ── SECTION ── */
-    .section-title {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .section-title::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
+    h3 {
+      font-size: 10.5pt;
+      font-weight: bold;
+      color: #000000;
     }
 
-    /* ── OBJECTIVE ── */
-    .objective p {
-      color: var(--muted);
-      font-size: 0.88rem;
-      line-height: 1.75;
-      max-width: 680px;
+    p { margin: 0; }
+
+    .meta { color: #555555; }
+
+    ul {
+      margin: 3pt 0 0 0;
+      padding-left: 15pt;
     }
 
-    /* ── CORE SKILLS ── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-    .skill-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      font-size: 0.84rem;
-      color: var(--ink);
-    }
-    .skill-item .skill-label {
-      font-weight: 600;
-      color: var(--green);
-      min-width: 90px;
-    }
+    li { margin-bottom: 2pt; }
 
-    /* ── EXPERIENCE ── */
-    .exp-item { margin-bottom: 28px; }
-    .exp-item:last-child { margin-bottom: 0; }
+    .skills p { margin-bottom: 2pt; }
 
-    .exp-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 2px;
-    }
+    .job, .project { margin-bottom: 6pt; }
+    .job:last-child, .project:last-child { margin-bottom: 0; }
 
-    .exp-company {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--ink);
-    }
-    .exp-period {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--white);
-      background: var(--green);
-      padding: 2px 10px;
-      border-radius: 12px;
-      white-space: nowrap;
-    }
-    .exp-location {
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-    .exp-role {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--green);
-      margin-bottom: 8px;
-    }
-    .exp-bullets {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-    .exp-bullets li {
-      font-size: 0.83rem;
-      color: var(--muted);
-      padding-left: 16px;
-      position: relative;
-      line-height: 1.55;
-    }
-    .exp-bullets li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--green);
-      font-size: 0.7rem;
-      top: 2px;
-    }
+    .education h3, .education p { display: inline; }
 
-    /* ── EDUCATION ── */
-    .edu-list { display: flex; flex-direction: column; gap: 8px; }
-    .edu-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.84rem;
-      color: var(--ink);
-    }
-    .edu-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-      flex-shrink: 0;
-    }
-
-    /* ── TECH SKILLS ── */
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag {
-      background: var(--green-light);
-      color: var(--green);
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 20px;
-      border: 1px solid #b2d8ca;
-    }
-
-    /* ── PROJECTS ── */
-    .project-item { margin-bottom: 12px; }
-    .project-item:last-child { margin-bottom: 0; }
-    .project-name {
-      font-weight: 700;
-      color: var(--ink);
-      font-size: 0.88rem;
-    }
-    .project-desc {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-top: 2px;
-      line-height: 1.55;
-    }
-
-    /* ── PRINT ── */
     @media print {
-      body { background: white; padding: 0; }
-      .page { box-shadow: none; border-radius: 0; }
-    }
-
-    @media (max-width: 600px) {
-      .header { grid-template-columns: 1fr; }
-      .header-right { text-align: left; }
-      .body { padding: 28px 24px; }
-      .header { padding: 28px 24px; }
-      .skills-grid { grid-template-columns: 1fr; }
+      body { max-width: none; margin: 0; padding: 10mm 15mm; }
+      .job, .project, .education { page-break-inside: avoid; break-inside: avoid; }
+      h2, h3 { page-break-after: avoid; break-after: avoid; }
     }
   </style>
 </head>
 <body>
-<div class="page">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="header-left">
-      <h1>Neema Sunder AV</h1>
-      <span class="role">Software Engineer</span><br>
-      <a class="linkedin" href="https://www.linkedin.com/in/ne" target="_blank">
-        🔗 linkedin.com/in/ne
-      </a>
-    </div>
-    <div class="header-right">
-      <div><strong>Date of Birth:</strong> 18 / 11 / 1995</div>
-      <div><strong>Address:</strong> AchamVeettil(h), Poovattuparamba P.O,<br>Calicut [dist], Pin: 673008</div>
-      <div><strong>Email:</strong> <a href="mailto:nsav1995@gmail.com">nsav1995@gmail.com</a></div>
-      <div><span class="phone">+91 9497051348</span></div>
-    </div>
+  <h1>Neema Sunder AV</h1>
+  <p class="headline">Backend Engineer - PHP, Laravel, Multi-tenant SaaS</p>
+  <p class="contact">
+    <span>Location: Calicut, Kerala, India</span> |
+    <span>Email: <a href="mailto:nsav1995@gmail.com">nsav1995@gmail.com</a></span> |
+    <span>Phone: <a href="tel:+919497051348">+91 9497051348</a></span>
+  </p>
+  <p class="contact">
+    <span>LinkedIn: <a href="https://www.linkedin.com/in/ne">https://www.linkedin.com/in/ne</a></span> |
+    <span>GitHub: <a href="https://github.com/neema1995">https://github.com/neema1995</a></span> |
+    <span>Portfolio: <a href="https://neema-portfolio-rbef-mauve.vercel.app">https://neema-portfolio-rbef-mauve.vercel.app</a></span>
+  </p>
+
+  <h2>Professional Summary</h2>
+  <p>Backend engineer building a multi-tenant SaaS platform used by <strong>500+ organizations</strong>. Cut report generation time by <strong>60%</strong> with MySQL optimization and Redis caching. Builds REST APIs and AI API integrations with PHP, Laravel, MySQL, Vue.js, and Redis. Working knowledge of AWS (EC2, RDS, S3).</p>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <p><strong>Languages:</strong> PHP, JavaScript, SQL, HTML5, CSS3</p>
+    <p><strong>Frameworks:</strong> Laravel, Vue.js, Tailwind CSS</p>
+    <p><strong>Databases:</strong> MySQL, MongoDB, Redis</p>
+    <p><strong>Cloud and DevOps:</strong> AWS (EC2, RDS, S3) - working knowledge, GitLab CI/CD, GitHub</p>
+    <p><strong>Architecture:</strong> REST APIs, Multi-tenant SaaS, Queue Processing, Caching</p>
+    <p><strong>Integrations:</strong> Stripe, Razorpay, Webhooks, SSO, SMS Gateway, AI APIs</p>
   </div>
 
-  <div class="body">
+  <h2>Work Experience</h2>
 
-    <!-- CAREER OBJECTIVE -->
-    <div class="objective">
-      <div class="section-title">Career Objective</div>
-      <p>Experienced Laravel developer with expertise in building scalable web applications using Laravel, PHP, MySQL and Vue.js. Strong expertise in RESTful APIs, database design and performance optimization. Passionate about writing clean, maintainable code and improving application efficiency.</p>
-    </div>
-
-    <!-- CORE SKILLS -->
-    <div>
-      <div class="section-title">Core Skills</div>
-      <div class="skills-grid">
-        <div class="skill-item"><span class="skill-label">Frameworks:</span> Laravel, Vue.js, Bootstrap</div>
-        <div class="skill-item"><span class="skill-label">Databases:</span> MySQL, MongoDB, PostgreSQL</div>
-        <div class="skill-item"><span class="skill-label">Tools:</span> Git, Composer, Docker, PHPUnit, Redis</div>
-        <div class="skill-item"><span class="skill-label">Others:</span> RESTful APIs, Unit Testing</div>
-      </div>
-    </div>
-
-    <!-- PROFESSIONAL EXPERIENCE -->
-    <div>
-      <div class="section-title">Professional Experience</div>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <span class="exp-company">Infinite Open-Source Solutions LLP</span>
-          <span class="exp-period">2023 – Present</span>
-        </div>
-        <div class="exp-location">Gov. Cyber Park (Sahya Building), Calicut, Kerala</div>
-        <div class="exp-role">Software Engineer</div>
-        <ul class="exp-bullets">
-          <li>Designed and developed RESTful APIs to support mobile applications (iOS / Android) in Laravel.</li>
-          <li>Created an automated productivity email report system using cron jobs, sending detailed performance summaries and activity logs to admins at regular intervals (daily / weekly / monthly).</li>
-          <li>Implemented task request system and time request system.</li>
-          <li>Created service classes for user management, project task handling, and time tracking — reducing code duplication and improving application performance.</li>
-        </ul>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <span class="exp-company">Cybooz IT Solutions</span>
-          <span class="exp-period">2022 – 2023 · 1y 9m</span>
-        </div>
-        <div class="exp-role">Web Developer</div>
-        <ul class="exp-bullets">
-          <li>Developed and maintained scalable web applications using Laravel and PHP.</li>
-          <li>Collaborated with frontend developers to implement responsive user interfaces using Vue.js and Tailwind CSS.</li>
-          <li>Optimized database queries to improve application performance.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- EDUCATION -->
-    <div>
-      <div class="section-title">Educational Profile</div>
-      <div class="edu-list">
-        <div class="edu-item"><div class="edu-dot"></div> B.Tech in Computer Science — Cochin University of Science and Technology</div>
-        <div class="edu-item"><div class="edu-dot"></div> 12th — Kerala Higher Secondary Examination Board</div>
-        <div class="edu-item"><div class="edu-dot"></div> 10th — Kerala Board of Public Examination</div>
-      </div>
-    </div>
-
-    <!-- SKILLS -->
-    <div>
-      <div class="section-title">Skills</div>
-      <div class="tags">
-        <span class="tag">Laravel</span>
-        <span class="tag">PHP</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">MongoDB</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">Vue.js</span>
-        <span class="tag">jQuery</span>
-        <span class="tag">REST APIs</span>
-        <span class="tag">Redis</span>
-        <span class="tag">Git</span>
-        <span class="tag">Docker</span>
-        <span class="tag">AWS</span>
-        <span class="tag">HTML5</span>
-        <span class="tag">CSS3</span>
-        <span class="tag">SQL</span>
-      </div>
-    </div>
-
-    <!-- PROJECTS -->
-    <div>
-      <div class="section-title">Projects</div>
-      <div class="project-item">
-        <div class="project-name">Desklog</div>
-        <div class="project-desc">An automated productivity tracking software for monitoring employee online, idle, and offline time. Allows users to create projects and tasks, and generate detailed reports and analytics.</div>
-      </div>
-      <div class="project-item">
-        <div class="project-name">Rupbee</div>
-        <div class="project-desc">A banking cloud solution for NBFCs that processes banking transactions across various branches.</div>
-      </div>
-      <div class="project-item">
-        <div class="project-name">ERP</div>
-        <div class="project-desc">Enterprise Resource Planning system.</div>
-      </div>
-    </div>
-
+  <div class="job">
+    <h3>Software Engineer</h3>
+    <p class="meta">Infinite Open-Source Solutions LLP | 2023 - Present</p>
+    <ul>
+      <li>Built and scaled <strong>Desklog</strong>, a multi-tenant SaaS platform used by <strong>500+ organizations</strong>.</li>
+      <li>Cut report generation time by <strong>60%</strong> through MySQL query optimization and <strong>Redis caching</strong>.</li>
+      <li>Designed <strong>REST APIs</strong> in Laravel for the iOS and Android mobile apps.</li>
+      <li>Moved bulk tasks and report generation to background <strong>queue jobs and batches</strong> (Laravel Bus).</li>
+      <li>Automated daily, weekly, and monthly <strong>email reports</strong> to admins using cron jobs.</li>
+      <li>Integrated <strong>Razorpay and Stripe</strong> for online payments and subscriptions.</li>
+      <li>Integrated <strong>AI APIs</strong> to [PLACEHOLDER: describe the AI feature and its result].</li>
+      <li>Implemented <strong>webhooks</strong>, <strong>SSO login</strong>, and the task and time request systems.</li>
+      <li>Wrote <strong>service classes</strong> for users, tasks, and time tracking to reduce duplicate code.</li>
+    </ul>
   </div>
-</div>
+
+  <div class="job">
+    <h3>Web Developer</h3>
+    <p class="meta">Cybooz IT Solutions | 2022 - 2023</p>
+    <ul>
+      <li>Built and maintained web applications with <strong>Laravel and PHP</strong>.</li>
+      <li>Optimized <strong>MySQL queries</strong> to improve application performance.</li>
+      <li>Integrated an <strong>SMS system</strong> into client applications.</li>
+      <li>Built responsive interfaces with frontend developers using <strong>Vue.js and Tailwind CSS</strong>.</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Desklog</h3>
+    <p>Employee time tracker with projects, tasks, and reports. Built its backend APIs, queues, payments, and caching.</p>
+    <p><strong>Tech:</strong> PHP, Laravel, MySQL, Redis, Laravel Queues, REST APIs, Stripe, Razorpay</p>
+  </div>
+
+  <div class="project">
+    <h3>Rupbee</h3>
+    <p>Banking cloud solution for NBFCs that processes transactions across branches. [PLACEHOLDER: what you built]</p>
+    <p><strong>Tech:</strong> PHP, Laravel, MySQL, Veu.js</p>
+  </div>
+
+  <h2>Education</h2>
+  <div class="education">
+    <h3>B.Tech in Computer Science</h3>
+    <p class="meta">| Cochin University of Science and Technology | [PLACEHOLDER: Graduation Year]</p>
+  </div>
+
 </body>
 </html>
